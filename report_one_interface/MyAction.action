@@ -1,0 +1,11 @@
+# Goal
+float32 max_speed
+float32 goal_point
+---
+# Result
+bool success
+string message
+---
+# Feedback
+string state
+float32 obstacle_distance
