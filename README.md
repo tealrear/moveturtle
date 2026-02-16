@@ -42,3 +42,8 @@ report_one_pkg/
 ├─ package.xml
 
 └─  setup.py
+
+============================
+
+실행 방법
+ros2 launch report_one_pkg report.launch.py
