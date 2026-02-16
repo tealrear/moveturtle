@@ -3,6 +3,27 @@
 
 터틀봇을 제어하는 GUI화면을 구성하고 topic, service, action 기능을 포함한 터틀봇 제어 프로그래밍 구현합니다.
 
+기능
+- 버튼 기반으로 수동 이동이 가능합니다
+- LiDAR기반 자율 주행을 합니다
+- /cmd_vel 퍼블리시하고 /scan 구독하는 기능을 구현했습니다.
+
+자동모드에선 0.2초 주기로 인식합니다.
+장애물을 감지하고 장애물 좌우 거리를 인식하여 시야가 확보가 더 잘되는 방향으로 회전합니다.
+장애물이 없는 경우 0.2m/s 속도로 직진합니다.
+
+msx_speed를 통해 속도 변경이 가능하고
+stop_distance를 통해 정지거리 변경이 가능합니다.
+
+| 구분      | 이름          | 타입        | 설명        |
+| ------- | ----------- | --------- | --------- |
+| Topic   | /cmd_vel    | Twist     | 이동 명령     |
+| Topic   | /scan       | LaserScan | LiDAR 데이터 |
+| Service | set_statue  | MyService | 설정 변경     |
+| Action  | move_target | MyAction  | 목표 이동     |
+
+
+
 report_one_interface/
 
 ├─ action/
