@@ -1,0 +1,5 @@
+float32 max_speed
+float32 stop_distance
+---
+bool success
+string message
